@@ -35,4 +35,16 @@ public class RacingCar {
             return "Автомибиль заведен";
         }
     }
+
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public void setCurrentSpeed(int currentSpeed) {
+        if (currentSpeed <= maxSpeed) {
+            this.currentSpeed = currentSpeed;
+        } else {
+            System.out.println("Current speed is higher than max speed");
+        }
+    }
 }
