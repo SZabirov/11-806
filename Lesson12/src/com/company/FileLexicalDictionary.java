@@ -11,7 +11,7 @@ public class FileLexicalDictionary {
     private final static int LETTERS_NUMBER = 26;
 
     private boolean isSorted = false;
-    int wordsCount = 0;
+    private int wordsCount = 0;
 
     public FileLexicalDictionary(String ... words) throws IOException {
         this();
@@ -21,7 +21,21 @@ public class FileLexicalDictionary {
     }
 
     public FileLexicalDictionary() throws IOException {
-        deleteInputFile();
+        clearInputFile();
+    }
+
+    /**
+     * Returns true if the word is presented in the dictionary
+     */
+    public boolean exists(String word) {
+        return false;
+    }
+
+    /**
+     * Returns the word with dpecified index
+     */
+    public String getById(int id) {
+        return null;
     }
 
     /**
@@ -47,7 +61,6 @@ public class FileLexicalDictionary {
         for (char c = 'a'; c <= 'z'; c++) {//deleting all no longer needed files
             File f = new File("out" + c + ".txt");
             if (f.exists()) {
-                //fixme file deletion is not working
                 f.delete();
             }
         }
@@ -92,7 +105,9 @@ public class FileLexicalDictionary {
                 pw.println(s);
             }
         }
-        //todo add Scanners closing
+        for (Scanner scanner : scanners) {
+            scanner.close();
+        }
         pw.close();
     }
 
@@ -134,9 +149,9 @@ public class FileLexicalDictionary {
     }
 
     /**
-     * Deletes input file
+     * Clears input file
      */
-    private void deleteInputFile() throws IOException {
+    private void clearInputFile() throws IOException {
         PrintWriter pw = new PrintWriter(new File(INPUT_FILE_NAME));
         pw.close();
     }
