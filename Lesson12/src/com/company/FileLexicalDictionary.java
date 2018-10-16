@@ -42,7 +42,9 @@ public class FileLexicalDictionary {
      * Adds specified word to a dictionary
      */
     public void add(String word) throws IOException {
-        PrintWriter pw = new PrintWriter(new FileWriter(new File(INPUT_FILE_NAME), true));
+        File f = new File(INPUT_FILE_NAME);
+        FileWriter fw = new FileWriter(f, true);
+        PrintWriter pw = new PrintWriter(fw);
         pw.println(word);
         pw.close();
         wordsCount++;
