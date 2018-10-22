@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class FileLexicalDictionary {
     private final static String INPUT_FILE_NAME = "in.txt";
-    private final static int LETTERS_NUMBER = 26;
+    private final static int LETTERS_NUMBER = 27;
 
     private boolean isSorted = false;
     private int wordsCount = 0;
@@ -97,8 +97,9 @@ public class FileLexicalDictionary {
     private void merge() throws IOException {
         PrintWriter pw = new PrintWriter(new File(INPUT_FILE_NAME));
         Scanner[] scanners = new Scanner[LETTERS_NUMBER];
-        for (int i = 0; i < LETTERS_NUMBER; i++) {
-            char letter = (char) (i + 'a');
+        scanners[0] = new Scanner(new File("out0.txt"));
+        for (int i = 1; i < LETTERS_NUMBER; i++) {
+            char letter = (char) (i + 'a' - 1);
             scanners[i] = new Scanner(new File("out" + letter + ".txt"));
         }
         for (int i = 0; i < LETTERS_NUMBER; i++) {
@@ -120,14 +121,19 @@ public class FileLexicalDictionary {
     private void distributeToFiles(int k) throws IOException {
         Scanner sc = new Scanner(new File(INPUT_FILE_NAME));
         PrintWriter[] pws = new PrintWriter[LETTERS_NUMBER];
-        for (int i = 0; i < LETTERS_NUMBER; i++) {
-            char letter = (char) (i + 'a');
+        pws[0] = new PrintWriter(new File("out0.txt"));
+        for (int i = 1; i < LETTERS_NUMBER; i++) {
+            char letter = (char) (i + 'a' - 1);
             pws[i] = new PrintWriter(new File("out" + letter + ".txt"));
         }
         while (sc.hasNextLine()) {
             String word = sc.nextLine();
-            char c = k < word.length() ? word.charAt(k) : 'a';
-            pws[c - 'a'].println(word);
+            if (k < word.length()) {
+                char c = word.charAt(k);
+                pws[(c - 'a') + 1].println(word);
+            } else {
+                pws[0].println(word);
+            }
         }
         for (PrintWriter pw : pws) {
             pw.close();

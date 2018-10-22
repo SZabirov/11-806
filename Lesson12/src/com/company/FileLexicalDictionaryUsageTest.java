@@ -18,6 +18,11 @@ public class FileLexicalDictionaryUsageTest {
         fld.add("aycdef");
         fld.add("adipiscing");
         fld.add("elit");
+        fld.add("a");
+        fld.add("aa");
+        fld.add("aaa");
+        fld.add("aa");
+        fld.add("a");
         fld.sort();
         System.out.println(fld.getDictionaryWordsAsString());
     }
