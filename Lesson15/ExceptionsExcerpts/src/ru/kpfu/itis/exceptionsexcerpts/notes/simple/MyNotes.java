@@ -13,9 +13,9 @@ public class MyNotes {
         notes[id] = text;
     }
 
-    public String getNote(int id) throws MyNoteException {
-        if (id >= notes.length) {
-            throw new MyNoteException("Такой заметки с номером " + id + " нет");
+    public String getNote(int id) throws NoteNotExistsException {
+        if (id >= notes.length || id < 0) {
+            throw new NoteNotExistsException("Такой заметки с номером " + id + " нет");
         }
         return notes[id];
     }

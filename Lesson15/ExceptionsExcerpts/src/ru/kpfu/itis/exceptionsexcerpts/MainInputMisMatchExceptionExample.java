@@ -11,6 +11,15 @@ public class MainInputMisMatchExceptionExample {
     }
 }
 
+
+
+
+
+
+
+
+
+
 class MainInputMisMatchExceptionExampleTryCatch {
     public static void main(String[] args) {
         Scanner sc = new Scanner("a + 2");

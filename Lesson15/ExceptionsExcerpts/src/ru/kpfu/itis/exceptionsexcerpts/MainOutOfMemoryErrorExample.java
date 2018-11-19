@@ -10,6 +10,18 @@ public class MainOutOfMemoryErrorExample {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 class MainOutOfMemoryErrorExampleTryCatch {
     public static void main(String[] args) {
         int[] arr = null;
