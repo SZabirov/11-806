@@ -1,0 +1,11 @@
+INFO 2018-11-20T11:20:31.135 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.136 Tokenized two texts
+INFO 2018-11-20T11:20:31.137 Tokenized two texts
+INFO 2018-11-20T11:20:31.137 Список провайдеров отсортирован

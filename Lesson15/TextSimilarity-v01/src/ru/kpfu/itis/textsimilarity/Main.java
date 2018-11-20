@@ -17,7 +17,10 @@ public class Main {
         //Текст в файлах точно такой же как при сравнении выше, поэтому результаты одинаковые
         File f1 = createFile("f1.txt", s1);
         File f2 = createFile("f2.txt", s2);
-        double coef2 = a.analyze(new FileTextProvider(f1), new FileTextProvider(f2));
+        FileTextProvider fileTextProvider1 = new FileTextProvider(f1);
+        FileTextProvider fileTextProvider2 = new FileTextProvider(f2);
+        double coef2 = a.analyze(fileTextProvider1, fileTextProvider2);
+        TextProvider tp = new WithTitleFileTextProvider(fileTextProvider1);
         System.out.println("Жаккард для содержимого файлов: " + coef2);
     }
 

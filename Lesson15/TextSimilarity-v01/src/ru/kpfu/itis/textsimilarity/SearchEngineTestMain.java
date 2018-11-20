@@ -1,16 +1,17 @@
 package ru.kpfu.itis.textsimilarity;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SearchEngineTestMain {
     public static void main(String[] args) {
-        SearchEngine se = new SearchEngineImpl();
+        SearchEngine se = new SearchEngineImpl(new JaccardTextAnalyzer());
         TextProvider query = new SimpleTextProvider("сложная жизнь");
+        TextProvider s4 = new SimpleTextProvider("some text");
         TextProvider s1 = new SimpleTextProvider("очень сложная");
         TextProvider s2 = new SimpleTextProvider("сложная очень");
-        TextProvider s3 = new SimpleTextProvider("жизнь прекрасна");
-        TextProvider s4 = new SimpleTextProvider("some text");
+        TextProvider s3 = new SimpleTextProvider("сложная жизнь прекрасна");
         List<TextProvider> sourceList = new ArrayList<>();
         sourceList.add(s1);
         sourceList.add(s2);
@@ -21,9 +22,6 @@ public class SearchEngineTestMain {
             System.out.println(tp);
         }
 
-
-
-
-
+        System.out.println(new FileManager().getAllFiles(new File("somefiles")));
     }
 }
