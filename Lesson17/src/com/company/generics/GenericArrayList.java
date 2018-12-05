@@ -18,6 +18,25 @@ public class GenericArrayList<T> implements Iterable<T>{
         return elements[index];
     }
 
+    //число элементов в списке
+    int size(){return 0;}
+
+    //есть ли в списке такой элемент
+    boolean contains(T value){return false;}
+
+    //удаление элемента по индекс (со смещением элементов влево)
+    void remove(int index){}
+
+    //возвращает все элементы из списка в виде массива
+    T[] toArray(){return null;}
+
+    //добавление всех элементов из списка list в данный список(в конец)
+    void addAll(GenericArrayList<T> list){};
+
+    //добавление всех элементов из списка list в данный список
+    //начиная с позиции index
+    void addAll(GenericArrayList<T> list, int index){}
+
 
     @Override
     public Iterator<T> iterator() {
