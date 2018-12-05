@@ -8,6 +8,7 @@ public class Main {
         ObjectArrayList list = new ObjectArrayList();
         list.add("haha");
         list.add("abc");
+        String str = (String) list.get(0);
         list.add(new Scanner(System.in));
         list.add("cderea");
         printUpperStrings(list);
