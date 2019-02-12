@@ -10,12 +10,16 @@ public class AudioTrack implements Comparable<AudioTrack> {
     //0 - равен
     @Override
     public int compareTo(AudioTrack o) {
-        int d = duration - o.duration;
-        if (d == 0) {
-            return title.compareTo(o.title);
-        } else {
-            return d;
-        }
+        return duration - o.duration;
+
+//        int d = duration - o.duration;
+//        if (d == 0) {
+//            return title.compareTo(o.title);
+//        } else {
+//            return d;
+//        }
+
+
 //        if (duration > o.duration) {
 //            return 1;
 //        } else {
