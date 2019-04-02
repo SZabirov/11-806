@@ -1,11 +1,12 @@
-package com.company.bestawesomeframework;
+package com.company.superbestawesomeframework;
 
-public class SimpleStudent {
-    private int age;
-    public String name;
+public class SimplStudent {
+    int age;
+    String name;
+
     @Override
     public String toString() {
-        return "Student{" +
+        return "SimplStudent{" +
                 "age=" + age +
                 ", name='" + name + '\'' +
                 '}';

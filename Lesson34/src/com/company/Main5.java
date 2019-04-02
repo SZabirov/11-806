@@ -4,11 +4,15 @@ import java.lang.reflect.Field;
 
 public class Main5 {
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
-        Student s = new Student("aaa");
-        Class c = s.getClass();
-        Field f = c.getDeclaredField("countOfDopkas");
-        f.setAccessible(true);
-        f.set(s, 9);
-        System.out.println(s);
+        Class c = Student.class;
+        Field[] fields = c.getDeclaredFields();
+        for (Field f : fields) {
+            System.out.println(f.getType() + " " +
+                    f.getName());
+        }
+
+        Field nameField = c.getDeclaredField("name");
+        Class myClass = nameField.getType();
+        String s = myClass.getName();
     }
 }

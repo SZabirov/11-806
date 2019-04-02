@@ -35,7 +35,16 @@
 
 
 
+#Homework34
 
+1.	Написать метод
+	```
+	public static <T> List<T> getManyWithCons(Class<T> aClass, int count, Object... params) {
+	```
+	Так, чтобы можно было получить список из 100 студентов с одинаковыми именами `John` и одинаковым возрастом - 18 лет:
+	```
+	List<SimpleStudent> list = SuperBestAwesomeFramework.getManyWithCons(SimpleStudent.class, 100, "John", 18);
+	```
 
 
 

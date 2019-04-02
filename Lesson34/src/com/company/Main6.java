@@ -1,10 +1,14 @@
 package com.company;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
 public class Main6 {
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
-        Class<Student> c = Student.class;
-        Student s = c.newInstance();//вызывает конструктор без параметров (если такого нет, ошибка)
-        s.setAge(25);
-        System.out.println(s);
+    static int x;
+
+    public static void main(String[] args) throws NoSuchFieldException {
+        Class c = Main6.class;
+        Field f = c.getDeclaredField("x");
+        System.out.println(Modifier.toString(f.getModifiers()));
     }
 }

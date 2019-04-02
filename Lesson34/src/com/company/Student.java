@@ -1,23 +1,19 @@
 package com.company;
 
+import javax.swing.text.html.HTMLDocument;
+
 public class Student {
     private int age;
     public String name;
-    private int countOfDopkas;
+    private Iterable i;
 
     public Student(String name) {
         this.name = name;
     }
 
-    public Student() {
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    private void passExam(String exam) {
+        System.out.println(exam + " ваще на изи, " +
+                "всё списал, ваще не палил");
     }
 
     @Override
@@ -25,7 +21,6 @@ public class Student {
         return "Student{" +
                 "age=" + age +
                 ", name='" + name + '\'' +
-                ", countOfDopkas=" + countOfDopkas +
                 '}';
     }
 }
