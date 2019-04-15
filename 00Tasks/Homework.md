@@ -33,8 +33,6 @@
 	- filter
 	- forEach
 
-
-
 #Homework34
 
 1.	Написать метод
@@ -46,6 +44,13 @@
 	List<SimpleStudent> list = SuperBestAwesomeFramework.getManyWithCons(SimpleStudent.class, 100, "John", 18);
 	```
 
+# Homework 36
+
+1. Задача с тредами
+
+# Итог
+
+21 апреля - крайний срок, чтобы залить домашние работы в репозиторий
 
 
 
