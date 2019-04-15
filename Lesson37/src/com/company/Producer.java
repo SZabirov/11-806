@@ -1,4 +1,4 @@
-package ru.itis;
+package com.company;
 
 public class Producer extends Thread {
     private Product product;
@@ -12,16 +12,16 @@ public class Producer extends Thread {
         while (true) {
             synchronized (product) {
                 while (!product.isConsumed()) {
-                    System.out.println("Спросили, потреблен ли");
+                    System.out.println("Потреблен ли?");
                     try {
                         product.wait();
                     } catch (InterruptedException e) {
-                        throw new IllegalStateException(e);
+                        throw new IllegalArgumentException(e);
                     }
                 }
                 product.produce();
-                System.out.println("Произвел");
                 product.notify();
+                System.out.println("Произвел");
             }
         }
     }

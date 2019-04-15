@@ -1,11 +1,12 @@
-package ru.itis;
+package com.company;
 
 public class Main {
     public static void main(String[] args) {
         Product p = new Product();
-        Consumer consumer = new Consumer(p);
         Producer producer = new Producer(p);
-        consumer.start();
+        Consumer consumer = new Consumer(p);
+
         producer.start();
+        consumer.start();
     }
 }
